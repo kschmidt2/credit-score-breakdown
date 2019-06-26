@@ -204,28 +204,28 @@
   /* Series options */
   /* Default colors */
   .highcharts-color-0 {
-    fill: $green-primary;
-    stroke: $green-primary;
+    fill: $green-secondary-2;
+    stroke: $green-secondary-2;
   }
   
   .highcharts-color-1 {
-    fill: $slate-secondary-3;
-    stroke: $slate-secondary-3;
+    fill: $green-secondary-3;
+    stroke: $green-secondary-3;
   }
   
   .highcharts-color-2 {
-    fill: $purple-primary;
-    stroke: $purple-primary;
+    fill: $green-secondary-4;
+    stroke: $green-secondary-4;
   }
   
   .highcharts-color-3 {
-    fill: $yellow-primary;
-    stroke: $yellow-primary;
+    fill: $green-secondary-5;
+    stroke: $green-secondary-5;
   }
   
   .highcharts-color-4 {
-    fill: $blue-primary;
-    stroke: $blue-primary;
+    fill: $green-secondary-6;
+    stroke: $green-secondary-6;
   }
   
   .highcharts-color-5 {
@@ -272,17 +272,17 @@
   }
   
   .highcharts-data-label {
-    font-size: 0.9em;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
   }
   
   .highcharts-data-label-box {
-    fill: none;
-    stroke-width: 0;
+    // fill: rgba(255,255,255,0.65);
+    stroke-width: 0; 
   }
   
   .highcharts-data-label text, text.highcharts-data-label {
-    fill: #333333;
+    fill: #fff;
   }
   
   .highcharts-data-label-connector {
@@ -290,8 +290,7 @@
   }
   
   .highcharts-halo {
-    fill-opacity: 0.25;
-    stroke-width: 0;
+    display: none;
   }
   
   .highcharts-series:not(.highcharts-pie-series) .highcharts-point-select,
@@ -319,8 +318,8 @@
   }
   
   .highcharts-pie-series .highcharts-point-hover {
-    fill-opacity: 0.75;
-    transition: fill-opacity 50ms;
+    // fill-opacity: 0.75;
+    // transition: fill-opacity 50ms;
   }
   
   .highcharts-funnel-series .highcharts-point {

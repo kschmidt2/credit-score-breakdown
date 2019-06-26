@@ -7,10 +7,29 @@
 document.addEventListener('DOMContentLoaded', function () {
   var myChart = Highcharts.chart('chart-container', {
     chart: {
-      type: 'bar',
+      type: 'pie',
       styledMode: true,
       spacingBottom: 25,
       spacingRight: 100
+    },
+    plotOptions: {
+      pie: {// innerSize: '50%',
+      },
+      series: {
+        dataLabels: {
+          crop: false,
+          align: 'left',
+          // alignTo: 'connectors',
+          // softConnector: false,
+          distance: '-40%',
+          // verticalAlign: 'top',
+          borderRadius: 2,
+          y: -25,
+          formatter: function formatter() {
+            return this.point.name + ': <br />' + this.point.y + '%';
+          }
+        }
+      }
     },
     title: {
       text: null
@@ -22,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
       x: 10,
       itemMarginTop: -10
     },
-    xAxis: {
-      categories: ['Apples', 'Bananas', 'Oranges']
+    data: {
+      googleSpreadsheetKey: '116N169mllbTm1-tFhvB5H1J2mzohr5EXMKnKe_t-QvU'
     },
     yAxis: {
       title: false,
@@ -36,8 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
       enabled: false
     },
     tooltip: {
-      shadow: false,
-      padding: 10
+      enabled: false
     },
     responsive: {
       rules: [{
@@ -57,13 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       }]
-    },
-    series: [{
-      name: 'Jane',
-      data: [1, 6, 4]
-    }, {
-      name: 'John',
-      data: [5, 7, 3]
-    }]
+    }
   });
 });
