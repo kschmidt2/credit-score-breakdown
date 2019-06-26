@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'pie',
             styledMode: true,
             spacingBottom: 25,
-            spacingRight: 100
+            spacingRight: 100,
         }, 
         plotOptions: {
             pie: {
@@ -21,16 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 animation: false,
                 dataLabels: {
                     crop: false,
-                    align: 'left',
                     distance: '-40%',
-                    borderRadius: 2,
                     useHTML: true,
                     formatter: function () {
                         return this.point.name + '<br /><b>' + this.point.y + '%'
                     }
                 }
             }
-        },    
+        },  
         title: {
             text: null
         },
@@ -42,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         series: [{
             data: [{
-                name: 'Payment history',
+                name: 'Payment<br>history',
                 y: 35,
                 dataLabels: {
                     className: 'payhist',

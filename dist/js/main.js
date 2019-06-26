@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         animation: false,
         dataLabels: {
           crop: false,
-          align: 'left',
           distance: '-40%',
-          borderRadius: 2,
           useHTML: true,
           formatter: function formatter() {
             return this.point.name + '<br /><b>' + this.point.y + '%';
@@ -41,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     series: [{
       data: [{
-        name: 'Payment history',
+        name: 'Payment<br>history',
         y: 35,
         dataLabels: {
           className: 'payhist'
