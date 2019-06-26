@@ -285,7 +285,7 @@
       }
     }
     &.payhist {
-      margin: -18px 0 0 30px;
+      margin: -18px 0 0 28px;
       @include iphone5 {
         margin: -10px 0 0 25px;
       }
@@ -295,21 +295,21 @@
     }
     &.chist {
       color: #fff;
-      margin: -25px 0 0 20px;
+      margin: -20px 0 0 10px;
       @include iphone5 {
         margin: -25px 0 0 15px;
       }
     }
     &.newc {
       color: #fff;
-      margin: -35px 0 0 -18px;
+      margin: -35px 0 0 -25px;
       @include iphone5 {
         margin: -30px 0 0 -18px;
       }
     }
     &.cmix {
       color: #fff;
-      margin: -45px 0 0 -5px;
+      margin: -45px 0 0 -8px;
       @include iphone5 {
         margin: -45px 0 0 -10px;
       }
