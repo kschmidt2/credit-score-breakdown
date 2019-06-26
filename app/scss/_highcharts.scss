@@ -272,34 +272,46 @@
   }
   
   .highcharts-data-label {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
+    line-height: 1.2;
     color: #000;
-    @include iphone5 {
-      font-size: 14px;
+    & span.strong {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.2;
+      @include iphone5 {
+        font-size: 16px;
+      }
     }
     &.payhist {
-      margin: -15px 0 0 25px;
+      margin: -18px 0 0 30px;
+      @include iphone5 {
+        margin: -10px 0 0 25px;
+      }
     }
     &.util { 
       margin: 8px 0 0 0;
     }
     &.chist {
       color: #fff;
-      margin: -30px 0 0 16px;
+      margin: -25px 0 0 20px;
+      @include iphone5 {
+        margin: -25px 0 0 15px;
+      }
     }
     &.newc {
       color: #fff;
-      margin: -25px 0 0 -20px;
+      margin: -35px 0 0 -18px;
       @include iphone5 {
-        margin: -15px 0 0 -18px;
+        margin: -30px 0 0 -18px;
       }
     }
     &.cmix {
       color: #fff;
-      margin: -40px 0 0 -14px;
+      margin: -45px 0 0 -5px;
       @include iphone5 {
-        margin: -30px 0 0 -10px;
+        margin: -45px 0 0 -10px;
       }
     }
   }

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
           distance: '-40%',
           useHTML: true,
           formatter: function formatter() {
-            return this.point.name + '<br /><b>' + this.point.y + '%';
+            return '<span class="strong">' + this.point.y + '%</span><br />' + this.point.name;
           }
         }
       }
