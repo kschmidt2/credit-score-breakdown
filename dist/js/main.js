@@ -13,20 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
       spacingRight: 100
     },
     plotOptions: {
-      pie: {// innerSize: '50%',
+      pie: {
+        innerSize: '50%'
       },
       series: {
+        animation: false,
         dataLabels: {
           crop: false,
           align: 'left',
-          // alignTo: 'connectors',
-          // softConnector: false,
           distance: '-40%',
-          // verticalAlign: 'top',
           borderRadius: 2,
-          y: -25,
+          useHTML: true,
           formatter: function formatter() {
-            return this.point.name + ': <br />' + this.point.y + '%';
+            return this.point.name + '<br /><b>' + this.point.y + '%';
           }
         }
       }
@@ -34,29 +33,45 @@ document.addEventListener('DOMContentLoaded', function () {
     title: {
       text: null
     },
-    legend: {
-      align: 'right',
-      symbolRadius: 0,
-      verticalAlign: 'top',
-      x: 10,
-      itemMarginTop: -10
-    },
-    data: {
-      googleSpreadsheetKey: '116N169mllbTm1-tFhvB5H1J2mzohr5EXMKnKe_t-QvU'
-    },
-    yAxis: {
-      title: false,
-      labels: {
-        useHTML: true,
-        overflow: 'allow'
-      }
-    },
     credits: {
       enabled: false
     },
     tooltip: {
       enabled: false
     },
+    series: [{
+      data: [{
+        name: 'Payment history',
+        y: 35,
+        dataLabels: {
+          className: 'payhist'
+        }
+      }, {
+        name: 'Utilization',
+        y: 30,
+        dataLabels: {
+          className: 'util'
+        }
+      }, {
+        name: 'Length of credit history',
+        y: 15,
+        dataLabels: {
+          className: 'chist'
+        }
+      }, {
+        name: 'New credit',
+        y: 10,
+        dataLabels: {
+          className: 'newc'
+        }
+      }, {
+        name: 'Credit mix',
+        y: 10,
+        dataLabels: {
+          className: 'cmix'
+        }
+      }]
+    }],
     responsive: {
       rules: [{
         condition: {

@@ -1,13 +1,19 @@
 $breakpoint-small: 500px;
 
 @mixin mobile {
-  @media (min-width: #{$breakpoint-small}) {
+  @media (max-width: #{$breakpoint-small}) {
     @content;
   }
 }
 
 @mixin desktop {
   @media (min-width: #{$breakpoint-small + 1px}) {
+    @content;
+  }
+}
+
+@mixin iphone5 {
+  @media (max-width: 350px) {
     @content;
   }
 }
