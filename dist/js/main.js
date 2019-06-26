@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     chart: {
       type: 'pie',
       styledMode: true,
-      spacingBottom: 25,
-      spacingRight: 100
+      spacingBottom: 25
     },
     plotOptions: {
       pie: {
@@ -69,25 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
           className: 'cmix'
         }
       }]
-    }],
-    responsive: {
-      rules: [{
-        condition: {
-          maxWidth: 500
-        },
-        chartOptions: {
-          chart: {
-            spacingRight: 10
-          },
-          legend: {
-            align: 'left',
-            x: -18
-          },
-          tooltip: {
-            enabled: false
-          }
-        }
-      }]
-    }
+    }]
   });
 });
